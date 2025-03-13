@@ -1,0 +1,184 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url('/asets/images/background1.png');
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+}
+.hero-section{
+    display: flex;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+.hero-name{
+    margin-top: 110px;
+}
+.hero-name h1{
+    font-size: 90px;
+}
+.hero-name p{
+    color: rgb(172, 169, 0);
+    font-family: cursive;
+    margin-top: -50px;
+    margin-left: 10px;
+}
+/* .hero-name button{
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px 30px 5px 30px;
+    border-radius: 0 10px;
+    cursor: pointer;
+    
+}
+.hero-name button:hover{
+    color: black;
+    background-color: greenyellow;
+    transition: 600ms ease;
+} */
+ 
+ /* button */
+ .btn {
+    color: #000000;
+    font-weight: bold;
+    padding: 10px 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .btn::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  /* glow */
+  .btn::before {
+    content: "";
+    background: linear-gradient(45deg,#FF0000, #FF7300, #FFFB00, #48FF00,#00FFD5, #002BFF, #FF00C8, #FF0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 10;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .btn:hover::before {
+    opacity: 1;
+  }
+  
+  .btn:active:after {
+    background: transparent;
+  }
+  
+  .btn:active {
+    color: #000;
+    font-weight: bold;
+  }
+.hero-music{
+    color: red;
+}
+.hero-img{
+    margin-right: 20px;
+    margin-top: -40px;
+}
+.round{
+    position: relative;
+}
+.round img{
+    margin-top: 80px;
+    animation: round 60s infinite;
+}
+@keyframes round   {
+
+    100%{
+        transform: rotate(360deg);
+    } 
+}
+.women-icon{
+    position: absolute;
+    margin-top: -561px;
+    margin-left: px;
+}
+.women-icon img{
+    -webkit-transition: all .6s ease;
+    -webkit-backface-visibility: hidden;
+    filter: drop-shadow(0 0 30px rgb(251, 255, 0));
+} 
+.women-icon img:hover{
+    filter: gray;;
+    -webkit-filter: grayscale(100%);
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-name h1 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-name h1 {
+        font-size: 50px;
+    }
+    .hero-name p {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-login-sign {
+        margin: 10px 0;
+    }
+    .hero-name h1 {
+        font-size: 40px;
+    }
+    .hero-name p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-name h1 {
+        font-size: 30px;
+    }
+    .hero-name p {
+        font-size: 12px;
+    }
+    .btn {
+        padding: 8px 20px;
+    }
+}
