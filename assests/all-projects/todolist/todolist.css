@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(250, 212, 212);
+    height: 100vh;
+}
+
+/* to do list section */
+.main-container{
+    justify-content: center;
+    background-color: rgb(250, 212, 212);
+    height: 100vh;
+    width: 100%;
+}
+.main-container h1{
+    color: black;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* border-bottom: 5px solid rgb(255, 179, 217);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px; */
+}
+.input-section{
+    display: flex;
+    justify-content: center;
+}
+#inputValue{
+    background-color: rgb(255, 255, 255);
+    font-weight: bolder;
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+}
+.todolist-added button{
+    background-color: rgba(255, 255, 255, 0.447);
+    font-weight: bolder;
+    width: 100px;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    outline: none;
+}
+.todolist-added button:hover{
+    background-color: rgba(145, 145, 145, 0.447);
+}
+.show-list{
+    background-color: pink;
+    height: auto;
+    margin: 60px;
+    padding: 30px 30px;
+    border-radius: 30px;
+}
+#taskList li{
+    background-color: rgba(204, 0, 255, 0.219);
+    color:  rgb(71, 0, 50);
+    border-bottom:20px solid pink;
+    font-family: cursive;
+    padding: 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#taskList li:hover{
+    background-color: rgba(204, 0, 255, 0.479);
+}
+.btn{
+    display: flex;
+    gap: 10px;
+}
+.btn button{
+    background-color: rgba(0, 0, 0, 0.444);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+.btn button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* mobile responsive */
+
+@media(max-width:768px){
+    body{
+        background-color: rgb(250, 212, 212);
+        height: 100vh;
+    }
+    .nav-bar{
+        background-color:  hotpink;
+        justify-content: start;
+        padding: 10px 10px;
+        left: 0px;
+        top: 0px;
+        
+    }
+    .menu-list{
+        background-color:pink;
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 38px;
+        text-align: center;
+        animation-name: menulist;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+    }
+    @keyframes menulist {
+    100% { transform: translatex(0); }
+    0% { transform: translatex(-40%); }
+    }
+    .menu-bar{
+        display: block;
+        left: 0;
+    }
+    .menu-list li{
+        margin-left: 0px;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+    }
+    .menu-list li:hover{
+        background-color: rgba(255, 105, 180, 0.575);
+        border: none;
+        border-bottom-left-radius: 100px;
+        padding: 10px;
+    }
+
+    .main-container{
+        justify-content: center;
+        width: 100%;
+    }
+    h1{
+        font-size: 20px;
+    }
+    img{
+        width: 20px;
+    }
+    #inputValue{
+        width: 150px;
+    }
+}

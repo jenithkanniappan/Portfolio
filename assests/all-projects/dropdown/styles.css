@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: rgb(179, 217, 255);
+}
+.nav-bar{
+    background-color: rgb(102, 179, 255);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+}
+.menu-list{
+    color: #001931;
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    font-family: "Poppins";
+    text-transform: uppercase;
+    margin-right: 60px;
+}
+.menu-list li{
+    padding: 10px 0;
+    list-style-type: none;
+}
+.menu-bar{
+    display: none;
+}
+@media(max-width:768px){
+    body{
+        background-color: rgb(179, 217, 255);
+    }
+    .nav-bar{
+        background-color:  rgb(102, 179, 255);
+        justify-content: start;
+        padding: 10px 10px;
+        left: 0px;
+        top: 0px;
+        
+    }
+    .menu-list{
+        background-color:rgb(153, 204, 255);
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 38px;
+        text-align: center;
+        animation-name: menulist;
+        animation-duration: 0.3s;
+        animation-timing-function: linear;
+    }
+    @keyframes menulist {
+    100% { transform: translatex(0); }
+    0% { transform: translatex(-40%); }
+}
+    /* .menu-list.active{
+        display: flex
+    } */
+    .menu-bar{
+        display: block;
+        left: 0;
+    }
+    .menu-list li{
+        margin-left: 0px;
+    }
+    .menu-list li:hover{
+        background-color: rgb(102, 179, 255);
+        color: white;
+    }
+}

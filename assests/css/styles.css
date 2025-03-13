@@ -1,184 +1,219 @@
+*{
+    margin: 0;
+}
 body{
-    width: 100%;
-    height: 100%;
-    background-image: url('/asets/images/background1.png');
-    position: fixed;
-    display: flex;
+    background-image: url('/assests/images/landing-bg.jpg');
+    background-color: rgba(0, 0, 0, 0.895);
+    height: 800px; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 1000px;
+    border-bottom-right-radius: 100px;    
+}
+.landing-page{
+    height: 800px;
+    position: relative;
     overflow: hidden;
 }
-.hero-section{
-    display: flex;
-    padding-left: 60px;
-    padding-right: 60px;
-}
 .hero-name{
-    margin-top: 110px;
+    font-size: 110px;
+    font-weight: bolder;
+    color: rgb(255, 0, 234);
+    margin-left: 90px;
+    padding-top: 200px;
+    margin-bottom: -50px;
+    bottom: 0;
+    text-transform: uppercase;
 }
-.hero-name h1{
-    font-size: 90px;
-}
-.hero-name p{
-    color: rgb(172, 169, 0);
-    font-family: cursive;
-    margin-top: -50px;
-    margin-left: 10px;
-}
-/* .hero-name button{
-    border: none;
-    background-color: red;
-    color: white;
-    padding: 5px 30px 5px 30px;
-    border-radius: 0 10px;
-    cursor: pointer;
-    
-}
-.hero-name button:hover{
-    color: black;
-    background-color: greenyellow;
-    transition: 600ms ease;
-} */
- 
- /* button */
- .btn {
-    color: #000000;
-    font-weight: bold;
-    padding: 10px 40px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 12px;
-    margin-top: 5px;
-    margin-left: 5px;
-  }
-  .btn::after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255);
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-  }
-  /* glow */
-  .btn::before {
-    content: "";
-    background: linear-gradient(45deg,#FF0000, #FF7300, #FFFB00, #48FF00,#00FFD5, #002BFF, #FF00C8, #FF0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 600%;
-    z-index: -1;
-    width: calc(100% + 4px);
-    height:  calc(100% + 4px);
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-    opacity: 10;
-  }
-  
-  @keyframes glowing {
-    0% {background-position: 0 0;}
-    50% {background-position: 400% 0;}
-    100% {background-position: 0 0;}
-  }
-  
-  /* hover */
-  .btn:hover::before {
-    opacity: 1;
-  }
-  
-  .btn:active:after {
-    background: transparent;
-  }
-  
-  .btn:active {
-    color: #000;
-    font-weight: bold;
-  }
-.hero-music{
-    color: red;
+.portfolio{
+    color: rgba(4, 255, 238, 0.579);
+    font-size: 230px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
 }
 .hero-img{
-    margin-right: 20px;
-    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
-.round{
-    position: relative;
-}
-.round img{
-    margin-top: 80px;
-    animation: round 60s infinite;
-}
-@keyframes round   {
-
-    100%{
-        transform: rotate(360deg);
-    } 
-}
-.women-icon{
+.hero-img img{
     position: absolute;
-    margin-top: -561px;
-    margin-left: px;
+    margin-top: -850px;
+    filter: grayscale();
+    animation-name: hero;
+    animation-duration: 1s;
+    animation-timing-function: linear;
 }
-.women-icon img{
-    -webkit-transition: all .6s ease;
-    -webkit-backface-visibility: hidden;
-    filter: drop-shadow(0 0 30px rgb(251, 255, 0));
-} 
-.women-icon img:hover{
-    filter: gray;;
-    -webkit-filter: grayscale(100%);
+/* @keyframes hero {
+    100% { transform: translatey(0); }
+    0% { transform: translatey(40%); }
+} */
+
+.about{
+    background-color: white;
+    color: black;
+    height: 400px;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
 }
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .hero-name h1 {
-        font-size: 70px;
-    }
+.about-details{
+    margin-top: 100px;
+    margin-left: 20px;
+}
+.about h1{
+    font-size: 50px;
+}
+.about-name{
+    color: orangered;
+}
+.about-details button{
+    background-color: greenyellow;
+    font-weight: bold;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    margin-top: 10px;
 }
 
-@media (max-width: 992px) {
-    .hero-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .hero-name h1 {
-        font-size: 50px;
-    }
-    .hero-name p {
-        margin-top: -30px;
-    }
+.projects-heading{
+    width: 80%;
+    margin-top: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+    justify-items: center;
+    font-size: 20px;
+    color: rgb(255, 0, 170);
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card{
+    background-color: rgba(107, 107, 107, 0.306);
+    /* border: 1px solid rgba(21, 161, 255, 0.753); */
+    margin: 50px 50px;
+    border-radius: 25px;
+    width: 350px;
+    justify-items: center;
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.heading h1{
+    font-size: 25px;
+    color: white;
+}
+.project-img{
+    margin: 10px;
+}
+.project-img img{
+    border-radius: 25px;
+}
+.view-button{
+    display: flex;
+    justify-content: center;
+}
+.view-button button{
+    width: 200PX;
+    height: 40px;
+    background-color: rgb(0, 199, 206);
+    font-weight: bolder;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 30px;
+    
 }
 
-@media (max-width: 768px) {
-    .nav-bar {
-        flex-direction: column;
-        text-align: center;
+@media(max-width:768px){
+    body{
+        background-image: url('/assests/images/landing-bg.jpg');
+        background-color: black;
+        height: 800px; 
+        background-position: center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        height: 500px;
     }
-    .nav-login-sign {
-        margin: 10px 0;
-    }
-    .hero-name h1 {
-        font-size: 40px;
-    }
-    .hero-name p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-name h1 {
+/* landing page sections */
+    .hero-name{
         font-size: 30px;
+        margin-left: 25px;
+        padding-top: 60px;
+        margin-bottom: -50px;
+        bottom: 0;
+        text-transform: uppercase;
+        }
+    .portfolio{
+        font-size: 65px;
+        font-weight: bolder;
+        margin-top: 35px;
+        text-transform: uppercase;
+        text-align: center;
+        }
+    .hero-img{
+        margin-top: -380px;
+        }
+    .hero-img img{
+        position: absolute;
+        width: 300px;
+        filter: grayscale();
+        animation-name: hero;
+        animation-duration: 0.5s;
+        /* animation-timing-function: linear; */
+        }
+
+/* about page sections */
+    .about{
+        height: 150px;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        }
+    .about-details{
+        margin-top: 35px;
+        margin-left: 5px;
+        }
+    .about h1{
+        font-size: 15px;
+        }
+    .about-img img{
+        width: 150px;
+        }
+    .about button{
+        padding: 5px 15px 5px 15px;
+        margin-top: 10px;
+        }
+
+/* projects page sections */
+    .projects-heading{
+        width: 80%;
+        margin-top: 30px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        justify-items: center;
+        font-size: 10px;
+        color: white;
+        text-transform: uppercase;
+        border-bottom: 1px solid white;
     }
-    .hero-name p {
-        font-size: 12px;
-    }
-    .btn {
-        padding: 8px 20px;
+    .projects{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
